@@ -318,24 +318,22 @@ void Graphics::PutPixel( int x,int y,Color c )
 
 void Graphics::DrawRectSet(int X, int Y,int dim)
 {
-		for (int StartLoop = 0 ;StartLoop < dim ; StartLoop++ )
-		{//Y loop
+	
+	for (int loopcount = 0; loopcount <= dim; loopcount++)
+	{
+		
 
-			assert(Y + dim < int(Graphics::ScreenHeight));
-			//assert(Y < 0);
+		for (int innerLoopCount = 0; innerLoopCount <= dim; innerLoopCount++)
+		{
 
-			PutPixel(X, Y + StartLoop, 55, 255, 200);
+			PutPixel(X + innerLoopCount, Y , 1, 255, 255);
 
 
-			for (int StartLoopInner = 0; StartLoopInner < dim; StartLoopInner++)
-			{//X loop
-
-				assert(X + dim < int(Graphics::ScreenWidth));
-				//assert(X < 0);
-
-				PutPixel(X + StartLoopInner, Y, 255, 255, 100);
-			}
 		}
+
+		Y++;
+	}
+
 	
 
 
