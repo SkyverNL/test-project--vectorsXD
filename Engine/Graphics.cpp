@@ -318,26 +318,31 @@ void Graphics::PutPixel( int x,int y,Color c )
 
 void Graphics::DrawRectSet(int X, int Y,int dim)
 {
-	
 	for (int loopcount = 0; loopcount <= dim; loopcount++)
 	{
-		
-
 		for (int innerLoopCount = 0; innerLoopCount <= dim; innerLoopCount++)
 		{
-
 			PutPixel(X + innerLoopCount, Y , 1, 255, 255);
-
-
 		}
-
 		Y++;
 	}
-
-	
-
-
 }
+
+void Graphics::DrawTriangle(int x, int y, int dim)
+{
+	for (int LoopCount = 0; LoopCount < dim; LoopCount++ & x++ & dim--)
+	{
+		for(int InnerLoopCount = 0 ;InnerLoopCount < dim - LoopCount; InnerLoopCount++)
+		{
+			PutPixel(x + InnerLoopCount , y - LoopCount, 200, 200, 200);
+		}
+	}
+}
+
+
+
+
+
 
 
 //////////////////////////////////////////////////

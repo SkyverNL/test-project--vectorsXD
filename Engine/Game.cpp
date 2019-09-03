@@ -45,18 +45,14 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
-	gfx.DrawRectSet(50, 50,25);
-
-
-
-	gfx.DrawRectSet(150, 150, 50);
+	
 
 
 
 	//testing area//
 
 
-
+	gfx.DrawTriangle(200, 200, 200);
 
 
 

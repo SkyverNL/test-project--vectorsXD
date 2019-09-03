@@ -58,6 +58,7 @@ public:
 	}
 	void PutPixel( int x,int y,Color c );
 	void DrawRectSet(int X, int Y,int dim);
+	void DrawTriangle(int x,int y,int dim);
 	~Graphics();
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain>				pSwapChain;
